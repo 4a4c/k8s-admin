@@ -152,7 +152,7 @@ Resources:
             apt-mark hold kubelet kubeadm kubectl
             kubeadm init --pod-network-cidr=192.168.0.0/16 > /home/ubuntu/kubeadm-init.log
             grep "kubeadm join " /home/ubuntu/kubeadm-init.log > /home/ubuntu/kubeadm-join.sh
-            sed -i 's/^/sudo /; s/$/ --ignore-preflight-errors=cri' /home/ubuntu/kubeadm-join.sh
+            sed -i 's/^/sudo /; s/$/ --ignore-preflight-errors=cri/' /home/ubuntu/kubeadm-join.sh
             mkdir -p /home/ubuntu/.kube
             cp -i /etc/kubernetes/admin.conf /home/ubuntu/.kube/config
             chown ubuntu:ubuntu -R /home/ubuntu/
