@@ -293,7 +293,7 @@ Resources:
             Action:
             - ec2:Describe*
             - ec2:Get*
-            - elasticloadbalancing:Describe*
+            - elasticloadbalancing:*
             Resource: "*"
 
   EC2InstanceProfile:
